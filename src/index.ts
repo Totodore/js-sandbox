@@ -1,6 +1,9 @@
 import express from "express";
+import { text as bodyText } from "body-parser";
 
 const app = express();
+
+app.use(bodyText());
 
 app.all("*", (req, res) => {
   console.log("Starting JS evaluation");
