@@ -1,0 +1,35 @@
+{
+  "name": "js-sandbox",
+  "version": "1.0.0",
+  "description": "Javascript sandbox in docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc",
+    "test": "echo ''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totodore/js-sandbox.git"
+  },
+  "keywords": [
+    "js",
+    "sandbox"
+  ],
+  "author": "Théodore Prévot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totodore/js-sandbox/issues"
+  },
+  "homepage": "https://github.com/totodore/js-sandbox#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^15.6.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
+  }
+}
