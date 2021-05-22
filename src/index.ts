@@ -6,6 +6,9 @@ const app = express();
 app.use(bodyText());
 
 app.all("*", (req, res) => {
+  if (req.headers?.authorization !== process.env.PASSWORD)
+    return res.sendStatus(403);
+  
   console.log("Starting JS evaluation");
   console.group("JS evaluation");
   res.send(eval(req.body || req.query.data));
