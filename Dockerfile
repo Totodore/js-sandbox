@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm i --only=prod && npm run build
+RUN npm i && npm run build
 
 CMD npm start 
